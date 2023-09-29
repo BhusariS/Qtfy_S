@@ -23,3 +23,10 @@ body{
   line-height: 1.5;
   overflow-x: hidden;
 }
+.swiper-slide{
+  width:auto !important;
+}
+img, svg{
+  display: block;
+  max-width: 100%;
+}

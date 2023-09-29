@@ -1,7 +1,7 @@
 .header{
     display: flex;
     justify-content: space-between;
-    align-items: wrap;
+    align-items: baseline;
 
 }
 .toggleText{
@@ -13,4 +13,7 @@
     display: flex;
     gap:40px;
     flex-wrap:wrap;
+}
+.cardWrapper{
+    margin-top: 18px;
 }

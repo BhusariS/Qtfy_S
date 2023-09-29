@@ -19,15 +19,17 @@ import Carousel from "../Carousel/Carousel";
             </h4>
             </div>
             
-               (
+               { !data.length?(
                 <CircularProgress/>
                ):(<div className={styles.cardWrapper}>
-               {!carouselToggle?
+               {!carouselToggle? 
                <div className={styles.wrapper}>
                 {data.map((item)=><Card key={item.id} data={item} type="album"/>)} 
-               </div>:(<Carousel data={data} componentRender={(data)=><Card data={data} type="album"/>}/>
-               )}</div>)
-                
+               </div>
+                :(<Carousel data={data} componentRender={(data)=><Card data={data} type="album"/>}/>
+                )} 
+               </div>)
+                }
         </div>
     )
 

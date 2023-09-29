@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import {useSwiper} from "swiper/react";
 import 'swiper/css';
-import  RightArrow from "../../assets/navRight.png"
+import  {ReactComponent as RightArrow} from "../../assets/navRight1.svg";
+import styles from "./Carousel.module.css";
 
 //const swiper=new useSwiper();
 const CarouselRightNavigation=()=>{
@@ -15,7 +16,7 @@ const CarouselRightNavigation=()=>{
 })},[]);
 
     return(
-        <div>
+        <div className={styles.rightNavigation}>
         {!isend && <RightArrow onClick={()=>swiper.slideNext()}/>}
         </div>
     )
