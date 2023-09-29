@@ -1,20 +1,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import styles from "./Carousel.module.css";
-//import {Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import {Swiper,  useSwiper } from "swiper/react";
+import {Swiper, SwiperSlide, useSwiper } from "swiper/react";
+//import {Swiper,  useSwiper } from "swiper/react";
  import CarouselLeftNavigation from "./CarouselLeftNavigation";
  import CarouselRightNavigation from "./CarouselRightNavigation";
 import 'swiper/css';
 
 const Carousel=({data,componentRender})=>{
     const Controls=({data})=>{
-        const swiper= new useSwiper();
+        const swiper=  useSwiper();
         console.log(swiper);
         useEffect(()=>{
             swiper.slideTo(0,null);
-        },[data,swiper]);
-       // return <></>;
+        },[data]);
+        return <></>;
     };
     return(
         <div className={styles.wrapper}>
@@ -26,12 +26,12 @@ const Carousel=({data,componentRender})=>{
                 <Controls data={data}/>
                 <CarouselLeftNavigation/>
                 <CarouselRightNavigation/>
-               {/* { data.map((item)=>{
+               { data.map((item) => {
                         return(
                             <SwiperSlide>{componentRender(item)}</SwiperSlide>
                         )
                     })
-                } */}
+                }
             </Swiper>
         </div>
     )

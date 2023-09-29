@@ -29,15 +29,19 @@ function App() {
     <div className='App' >
       <NavBar/>
       <Hero/>
-      {topAlbumsData.map((item)=>{
-        return(
-          // eslint-disable-next-line no-undef
-          <Card key={item.id} data={item} type="album"/>
-        )
-
-      })}
-      <Section/>
-      <Carousel/>
+      
+      <div>
+      <Section data={topAlbumsData} title="Top Albums"/>
+      {/* {
+        topAlbumsData.map((item)=>{
+          return(
+            // eslint-disable-next-line no-undef
+            <Card key={item.id} data={item} type="album"/>
+          )
+  
+        })
+      } */}
+      </div>
 
     </div>
   );
