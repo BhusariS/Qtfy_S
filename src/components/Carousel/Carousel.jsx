@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
+import React from 'react';
+import { useEffect } from "react";
 import styles from "./Carousel.module.css";
 import {Swiper, SwiperSlide, useSwiper } from "swiper/react";
 //import {Swiper,  useSwiper } from "swiper/react";
@@ -7,7 +8,7 @@ import {Swiper, SwiperSlide, useSwiper } from "swiper/react";
  import CarouselRightNavigation from "./CarouselRightNavigation";
 import 'swiper/css';
 
-const Carousel=({data,componentRender})=>{
+const Carousel=({data,component})=>{
     const Controls=({data})=>{
         const swiper=  useSwiper();
         console.log(swiper);
@@ -28,7 +29,7 @@ const Carousel=({data,componentRender})=>{
                 <CarouselRightNavigation/>
                { data.map((item) => {
                         return(
-                            <SwiperSlide>{componentRender(item)}</SwiperSlide>
+                            <SwiperSlide>{component(item)}</SwiperSlide>
                         )
                     })
                 }

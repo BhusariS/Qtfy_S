@@ -12,6 +12,14 @@ export async function fetchTopAlbums(){
     }
 
 }
+export async function fetchSongs(){
+    try{
+        const response=await axios.get(`${BACKEND_ENDPOINT}/songs`);
+        return response.data;
+    }catch(err){
+        console.log(err);
+    }
+}
 
 // const promise=new Promise((res, rej)=>{
 //     setTimeout(() => {
